@@ -5,10 +5,10 @@ import java.util.*;
 public class Main {
     // 请编写一个方法，获得a和b集合中的公共元素。
     public static Set<Person> commonElementsIn(List<Person> a, List<Person> b) {
-        List<Person> list = new LinkedList<Person>();
-        list.addAll(a);
-        list.retainAll(b);
-        return new HashSet<>(list);
+        Set setA = new HashSet(a);
+        Set setB = new HashSet(b);
+        setA.retainAll(setB);
+        return setA;
 
     }
 
@@ -22,8 +22,14 @@ public class Main {
 
         @Override
         public boolean equals(Object obj) {
-            if (this == obj) return true;
-            if (obj == null || getClass() != obj.getClass()) return false;
+            if (this == obj)
+            {
+                return true;
+            }
+            if (obj == null || getClass() != obj.getClass())
+            {
+                return false;
+            }
             Person person = (Person) obj;
             return Objects.equals(name, person.name);
         }
