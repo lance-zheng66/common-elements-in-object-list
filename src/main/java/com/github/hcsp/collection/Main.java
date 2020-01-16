@@ -22,12 +22,10 @@ public class Main {
 
         @Override
         public boolean equals(Object obj) {
-            if (this == obj)
-            {
+            if (this == obj) {
                 return true;
             }
-            if (obj == null || getClass() != obj.getClass())
-            {
+            if (obj == null || getClass() != obj.getClass()) {
                 return false;
             }
             Person person = (Person) obj;
