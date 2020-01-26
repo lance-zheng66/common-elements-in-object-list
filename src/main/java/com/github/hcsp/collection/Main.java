@@ -9,17 +9,17 @@ import java.util.Set;
 public class Main {
     // 请编写一个方法，获得a和b集合中的公共元素。
     public static Set<Person> commonElementsIn(List<Person> a, List<Person> b) {
-        HashSet<Person> set= new HashSet<>();
+        HashSet<Person> set = new HashSet<>();
         //a.retainAll(b);
-        int size=Math.max(a.size(),b.size());
-        for (int i=0;i<size;++i) {
-            if(a.get(i).name.equals(b.get(i).name)){
+        int size = Math.max(a.size(), b.size());
+        for (int i = 0; i < size; ++i) {
+            if (a.get(i).name.equals(b.get(i).name)) {
                 set.add(a.get(i));
             }
-            continue;
         }
         return set;
     }
+
     // Person类，如果两个Person对象的name相等，则认为这两个对象相等。
     public static class Person {
         private String name;
