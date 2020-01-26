@@ -8,14 +8,14 @@ import java.util.Set;
 public class Main {
     // 请编写一个方法，获得a和b集合中的公共元素。
     public static Set<Person> commonElementsIn(List<Person> a, List<Person> b) {
-        HashSet<Person> set = new HashSet<>();
-        //a.retainAll(b);
-        int size = Math.max(a.size(), b.size());
-        for (int i = 0; i < size; ++i) {
-            if (a.get(i).name.equals(b.get(i).name)) {
-                set.add(b.get(i));
-            }
-        }
+        HashSet<Person> set = new HashSet<>(a);
+        set.retainAll(b);
+//        int size = Math.max(a.size(), b.size());
+//        for (int i = 0; i < size; ++i) {
+//            if (a.get(i).name.equals(b.get(i).name)) {
+//                set.add(b.get(i));
+//            }
+//        }
         return set;
     }
 
@@ -33,6 +33,11 @@ public class Main {
 
         public void setName(String name) {
             this.name = name;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            return (this.name.equals(((Person) obj).name));
         }
     }
 
