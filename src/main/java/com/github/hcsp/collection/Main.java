@@ -13,7 +13,7 @@ public class Main {
         int size = Math.max(a.size(), b.size());
         for (int i = 0; i < size; ++i) {
             if (a.get(i).name.equals(b.get(i).name)) {
-                set.add(a.get(i));
+                set.add(b.get(i));
             }
         }
         return set;
