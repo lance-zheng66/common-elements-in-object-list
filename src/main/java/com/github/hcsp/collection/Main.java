@@ -1,5 +1,6 @@
 package com.github.hcsp.collection;
 
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -10,12 +11,6 @@ public class Main {
     public static Set<Person> commonElementsIn(List<Person> a, List<Person> b) {
         HashSet<Person> set = new HashSet<>(a);
         set.retainAll(b);
-//        int size = Math.max(a.size(), b.size());
-//        for (int i = 0; i < size; ++i) {
-//            if (a.get(i).name.equals(b.get(i).name)) {
-//                set.add(b.get(i));
-//            }
-//        }
         return set;
     }
 
@@ -39,9 +34,19 @@ public class Main {
         public boolean equals(Object obj) {
             return (this.name.equals(((Person) obj).name));
         }
+
+        @Override
+        public int hashCode() {
+            return name.hashCode();
+        }
     }
 
     public static void main(String[] args) {
+//        Person person1=new Person("王");
+//        Person person2=new Person("李");
+//        int hashcode1=person1.hashCode();
+//        int hashcode2=person2.hashCode();
+//        //System.out.println(person.hashCode());
         List<Person> list1 = Arrays.asList(new Person("张学友"), new Person("周杰伦"));
         List<Person> list2 = Arrays.asList(new Person("周润发"), new Person("周杰伦"));
         System.out.println(commonElementsIn(list1, list2));
