@@ -44,13 +44,6 @@ public class Main {
         public int hashCode() {
             return Objects.hash(name);
         }
-
-        @Override
-        public String toString() {
-            return "Person{" +
-                    "name='" + name + '\'' +
-                    '}';
-        }
     }
 
     public static void main(String[] args) {
