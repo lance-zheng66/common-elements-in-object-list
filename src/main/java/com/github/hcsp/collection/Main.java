@@ -5,15 +5,15 @@ import java.util.*;
 public class Main {
     // 请编写一个方法，获得a和b集合中的公共元素。
     public static Set<Person> commonElementsIn(List<Person> a, List<Person> b) {
-        Set<Person> CommonElement = new HashSet<>();
-        for (Person PersonA : a) {
-            for (Person PersonB : b) {
-                if (PersonB.equals(PersonA)) {
-                    CommonElement.add(PersonA);
+        Set<Person> commonElement = new HashSet<>();
+        for (Person personA : a) {
+            for (Person personB : b) {
+                if (personB.equals(personA)) {
+                    commonElement.add(personA);
                 }
             }
         }
-        return CommonElement;
+        return commonElement;
     }
 
     // Person类，如果两个Person对象的name相等，则认为这两个对象相等。
