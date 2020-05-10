@@ -1,14 +1,14 @@
 package com.github.hcsp.collection;
 
-import java.util.*;aaa
+import java.util.*;
 
 public class Main {
     // 请编写一个方法，获得a和b集合中的公共元素。
     public static Set<Person> commonElementsIn(List<Person> a, List<Person> b) {
         Set<Person> res = new HashSet<>();
 
-        res.addAll(a);
-        res.retainAll(b);
+        
+        
 
         return res;
     }
